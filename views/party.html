@@ -1,0 +1,22 @@
+<div class="container">
+	<div class="main-box fadeIn" ng-controller="MessageController as msgCtrl">
+		<div class="content">
+			<div class="top">
+				<div class="message">{{msgCtrl.message}}</div>
+			</div>
+			<div class="bottom">
+				<div class="actions">
+					<div class="action" ng-repeat="action in msgCtrl.actions">{{action}}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="participants" ng-controller="PeersController as peersCtrl">
+		<button style="position:absolute" ng-click="peersCtrl.addPeer()">Add peer</button>
+		<button style="position:absolute; top: 20px;" ng-click="peersCtrl.mute()">Mute</button>
+		<a href="#/" style="position:absolute; top: 40px;">Leave room</a>
+		<div ng-repeat="peer in peers" ng-style="peer.style" class="participant fadeIn" id="remoteVideos">
+			<div class="video-mask" ng-bind-html="peer.video | unsafe"></div>
+		</div>
+	</div>
+</div>

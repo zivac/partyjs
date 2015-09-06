@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="party">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="party.js">
+    <meta name="author" content="darac">
+	<title>party.js</title>
+	<!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="logo slideRight">party.js</div>
+    <div class="container local-video">
+        <div class="participant fadeIn" ng-controller="UserController as userCtrl" ng-style="userCtrl.user.style">
+            <div class="audio-level" id="localVolume" ng-class="{silent: userCtrl.user.silent}" ng-style="userCtrl.user.audioStyle"></div>
+            <div class="video-mask">
+                <video id="localVideo" poster="img/white.png"></video>
+            </div>
+        </div>
+    </div>
+	<div ng-view></div>
+	<div class="signature slideLeft">by darkec</div>
+	<script src="js/underscore-min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/simplewebrtc.js"></script>
+    <script src="js/party.js"></script>
+</body>
+</html>

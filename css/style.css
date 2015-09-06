@@ -1,0 +1,172 @@
+html, body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+body {
+	background-color: #00CCFF;
+	font-family: 'Raleway', sans-serif;
+}
+.container {
+	width: 100vh;
+	height: 100vh;
+	margin: auto;
+	position: relative;
+}
+.container.local-video {
+	height: 0;
+}
+.main-box {
+	background-color: white;
+	position: absolute;
+	width: 50vh;
+	height: 50vh;
+	border-radius: 25vh;
+	top: 25vh;
+	left: 25vh;
+}
+.main-box .content {
+	padding: 7.5vh;
+    height: 35vh;
+}
+.main-box .content .top {
+	height: 50%;
+	position: relative;
+}
+.main-box .content .top .message {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.main-box .content .bottom {
+	height: 50%;
+	text-align: center;
+}
+.main-box .content .bottom .actions {
+	margin-top: 10px;
+	display: inline-block;
+}
+.main-box .content .bottom .actions .action {
+	display: inline-block;
+	float: left;
+	clear: both;
+}
+.main-box .content .bottom .actions .action:hover {
+	cursor: pointer;
+	color: #0066FF;
+}
+.main-box .content .bottom .actions .action::before {
+	content: '> ';
+}
+.participant {
+	z-index: 1;
+	position: absolute;
+	width: 20vh;
+	height: 20vh;
+	margin: 2.5vh;
+	border-radius: 10vh;
+	top: 15vh;
+	left: 37.5vh;
+	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+}
+.participant .audio-level {
+	width: 20vh;
+	height: 20vh;
+	border-radius: 10vh;
+	box-shadow: 0 0 5vh blue;
+	position: absolute;
+	opacity: 0;
+}
+.participant .audio-level.silent {
+	opacity: 0;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+.participant .video-mask {
+    -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+    background-color: white;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 10vh;
+}
+.participant video {
+    width: 35vh;
+    height: 35vh;
+    position: absolute;
+    top: -7.5vh;
+    left: -7.5vh;
+}
+.logo, .signature {
+	position: absolute;
+	font-family: 'Indie Flower', cursive;
+	padding: 20px;
+}
+.logo {
+    font-size: 40px;
+    background-color: white;
+    height: 150px;
+    width: 150px;
+    border-radius: 0 0 300px 0;	
+}
+.signature {
+	font-size: 25px;
+	bottom: 0;
+	right: 0;
+}
+.login-container {
+	width: 330px;
+    padding-top: 40vh;
+    margin: auto;
+    position: relative;
+}
+.login-text {
+    display: block;
+    margin: 20px;
+    width: 240px;
+    height: 30px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+}
+.login-text:focus {
+    outline: 0;
+    box-shadow: 0 0 10px #0066FF;
+}
+.login-button {
+    height: 30px;
+    width: 250px;
+    display: block;
+    background-color: #0066FF;
+    color: white;
+    float: right;
+    margin-right: 30px;
+    border-radius: 30px;
+    padding: 5px 15px;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+}
+.login-button:hover, .login-button:focus {
+	background-color: #006699;
+	outline: 0;
+}
