@@ -1,2 +1,2 @@
 # partyjs
-webrtc party app tool
+A web application for playing social games over web using WebRTC.
